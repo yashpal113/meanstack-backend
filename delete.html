@@ -1,0 +1,17 @@
+Id <input id="t1"> <br>
+<button onclick="xyz()">Show</button>
+<div id="d1"></div>
+<script>
+    var xhr;
+    function xyz()
+    { data={ "name": t1.value};
+         xhr=new XMLHttpRequest();
+url="http://tsdc:3000/api/users/"+ t1.value;
+xhr.open("delete",url,true);
+xhr.setRequestHeader("Content-Type","application/json")
+xhr.onreadystatechange=()=>{ 
+    if(xhr.readyState==4)
+    d1.innerHTML=xhr.responseText;}
+xhr.send();
+    }
+</script>

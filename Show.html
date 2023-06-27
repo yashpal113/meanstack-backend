@@ -1,0 +1,16 @@
+Name <input id="t1"> <br>
+<button onclick="xyz()">Show</button>
+<div id="d1"></div>
+<script>
+    var xhr;
+    function xyz()
+    {
+xhr=new XMLHttpRequest();
+url="http://tsdc:3000/api/users?name="+ t1.value;
+xhr.open("GET",url,true);
+xhr.onreadystatechange=()=>{ 
+    if(xhr.readyState==4)
+    d1.innerHTML=xhr.responseText;}
+xhr.send();
+    }
+</script>
