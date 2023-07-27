@@ -15,3 +15,9 @@ app.get("/", (req,res)=>{
 app.post("/", (req,res)=>{
     res.json({"message":{"data": req.body}});
 })
+app.get("/users",(req,res)=>{
+obj=[{"id":"1","name":"one"},{"id":"2","name":"two"}];
+    res.json(obj);
+});
+
+
